@@ -10,6 +10,6 @@ async function bootstrap() {
       whitelist: true, //doing this will filter all the fields that are send by user but not present in our dto
     }),
   );
-  await app.listen(3333);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();

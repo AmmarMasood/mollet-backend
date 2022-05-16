@@ -8,6 +8,7 @@ export class UserService {
   constructor(private prismaService: PrismaService) {}
 
   async updateUserProfile(userId: number, dto: UpdateUserDto) {
+    console.log(userId, dto);
     const user = await this.prismaService.user.update({
       where: {
         id: userId,

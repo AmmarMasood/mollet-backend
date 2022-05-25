@@ -174,6 +174,34 @@ export class NewsService {
     };
   }
 
+  async getStockInformation(stockName: string) {
+    try {
+      const html = await this.getData(
+        `https://dps.psx.com.pk/company/${stockName}`,
+      );
+      const $ = cheerio.load(html);
+      const quoteDetails = $('div.quote__details', html);
+      const details = {
+        fullName: quoteDetails.find('.quote__name').text(),
+        sector: quoteDetails.find('.quote__sector').text(),
+        price: $('div.quote__price', html).find('.quote__close').text(),
+        change: $('div.quote__change', html).find('.change__value').text(),
+        changePercentage: $('div.quote__change', html)
+          .find('.change__percent')
+          .text(),
+      };
+      return details;
+    } catch (e) {
+      throw new HttpException(
+        {
+          status: HttpStatus.INTERNAL_SERVER_ERROR,
+          error: `Unable to get ${stockName} details`,
+        },
+        HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+  }
+
   async getData(url): Promise<any> {
     try {
       const res = await lastValueFrom(this.httpService.get(url).pipe());

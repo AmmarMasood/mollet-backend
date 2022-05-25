@@ -34,26 +34,25 @@ model User {
   last_name String?
   phone_number String?
 
-  portfolio Portfolio? @relation(fields:[portfolio_type], references: [portfolio_type])
-  portfolio_type PORTFOLIO_TYPES?
+  portfolio Portfolio? @relation(fields:[portfolio_id], references: [id])
+  portfolio_id Int?
 
   risk_score Int? 
   invested_amount Int?
 
-    @@map("users")
+  @@map("users")
 
 }
 model Portfolio{
-id Int @id @default(autoincrement())
-createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+ id Int @id @default(autoincrement())
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
   
-
   users User[]
-
   stocks Stock[]
-  portfolio_type PORTFOLIO_TYPES @unique
-  beta Int
+  
+  portfolio_type PORTFOLIO_TYPES
+
 
     @@map("portfolios")
 }
@@ -65,12 +64,10 @@ model Stock {
 
   portfolios Portfolio[]
   company_name String?
-
   stock_name String @unique
-  expected_return Int
-  portfolio_weight Int
-  beta Int
 
-    @@map("stocks")
+  weight Int
+
+  @@map("stocks")
 }
 

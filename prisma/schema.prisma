@@ -15,11 +15,11 @@ datasource db {
 
 
 enum PORTFOLIO_TYPES {
-  ABOVE_AVERAGE_RISK
-  AVERAGE_RISK
-  BELOW_AVERAGE_RISK
-  LOW_RISK
-  HIGH_RISK
+  AGGRESIVE
+  SEMI_AGGRESIVE
+  MODERATE
+  BELOW_AVERAGE
+  CONSERVATIVE
 }
 
 model User {
@@ -37,22 +37,23 @@ model User {
   portfolio Portfolio? @relation(fields:[portfolio_id], references: [id])
   portfolio_id Int?
 
-  risk_score Int? 
+  risk_score Float? 
   invested_amount Int?
 
-  @@map("users")
+    @@map("users")
 
 }
 model Portfolio{
- id Int @id @default(autoincrement())
- createdAt DateTime @default(now())
- updatedAt DateTime @updatedAt
+id Int @id @default(autoincrement())
+createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
   
-  users User[]
-  stocks Stock[]
-  
-  portfolio_type PORTFOLIO_TYPES
 
+  users User[]
+
+
+  portfolio_type PORTFOLIO_TYPES
+  yScore Float
 
     @@map("portfolios")
 }
@@ -62,12 +63,12 @@ model Stock {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  portfolios Portfolio[]
+
   company_name String?
   stock_name String @unique
 
-  weight Int
+  weight Float
 
-  @@map("stocks")
+    @@map("stocks")
 }
 

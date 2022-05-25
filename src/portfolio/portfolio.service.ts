@@ -31,17 +31,17 @@ export class PortfolioService {
     }
   }
 
-  async updatePortfolio(dto: UpdatePortfolioDto, portfolio_type) {
+  async updatePortfolio(dto: UpdatePortfolioDto, portfolio_id) {
     try {
       const portfolio = await this.prismaService.portfolio.findUnique({
         where: {
-          portfolio_type: portfolio_type,
+          id: portfolio_id,
         },
       });
       if (portfolio) {
         return this.prismaService.portfolio.update({
           where: {
-            portfolio_type: portfolio_type,
+            id: portfolio_id,
           },
           data: { ...dto },
         });
@@ -74,12 +74,9 @@ export class PortfolioService {
 
   getPortfolioByType(portfolio_type: PORTFOLIO_TYPES) {
     try {
-      const portfolio = this.prismaService.portfolio.findUnique({
+      const portfolio = this.prismaService.portfolio.findMany({
         where: {
           portfolio_type,
-        },
-        include: {
-          stocks: true,
         },
       });
       if (portfolio) {
@@ -93,6 +90,6 @@ export class PortfolioService {
   }
 
   getAllPortfolios() {
-    return this.prismaService.portfolio.findMany({ include: { stocks: true } });
+    return this.prismaService.portfolio.findMany();
   }
 }

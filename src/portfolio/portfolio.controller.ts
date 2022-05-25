@@ -29,10 +29,10 @@ export class PortfolioController {
   @UseGuards(AuthGuard('jwt'))
   @Patch(':type')
   updatePortfolio(
-    @Param('type') portfolio_type: PORTFOLIO_TYPES,
+    @Param('type') portfolio_id: Number,
     @Body() dto: UpdatePortfolioDto,
   ) {
-    return this.portfolioService.updatePortfolio(dto, portfolio_type);
+    return this.portfolioService.updatePortfolio(dto, portfolio_id);
   }
 
   @UseGuards(AuthGuard('jwt'))

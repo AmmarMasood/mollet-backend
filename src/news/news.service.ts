@@ -189,6 +189,7 @@ export class NewsService {
         changePercentage: $('div.quote__change', html)
           .find('.change__percent')
           .text(),
+        stockName,
       };
       return details;
     } catch (e) {

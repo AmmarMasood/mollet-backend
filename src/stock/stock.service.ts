@@ -17,7 +17,7 @@ export class StockService {
   constructor(private prismaService: PrismaService) {}
 
   getAllStocks() {
-    return this.prismaService.stock.findMany({ include: { portfolios: true } });
+    return this.prismaService.stock.findMany();
   }
 
   async createStock(dto: CreateStockDto) {
@@ -43,9 +43,6 @@ export class StockService {
     const stock = await this.prismaService.stock.findFirst({
       where: {
         stock_name,
-      },
-      include: {
-        portfolios: true,
       },
     });
     if (stock) {
@@ -85,89 +82,89 @@ export class StockService {
     }
   }
 
-  async removeStockFromPortfolio(dto: UpdateStockToPortfolioDto) {
-    try {
-      const portfolio = await this.prismaService.portfolio.findFirst({
-        where: { portfolio_type: dto.portfolio_type },
-      });
-      const stock = await this.prismaService.stock.findFirst({
-        where: { stock_name: dto.stock_name },
-      });
+  // async removeStockFromPortfolio(dto: UpdateStockToPortfolioDto) {
+  //   try {
+  //     const portfolio = await this.prismaService.portfolio.findFirst({
+  //       where: { portfolio_type: dto.portfolio_type },
+  //     });
+  //     const stock = await this.prismaService.stock.findFirst({
+  //       where: { stock_name: dto.stock_name },
+  //     });
 
-      if (portfolio && stock) {
-        await this.prismaService.stock.update({
-          where: {
-            stock_name: dto.stock_name,
-          },
-          data: {
-            portfolios: {
-              disconnect: { id: portfolio.id },
-            },
-          },
-        });
-        await this.prismaService.portfolio.update({
-          where: {
-            portfolio_type: dto.portfolio_type,
-          },
-          data: {
-            stocks: {
-              disconnect: { id: stock.id },
-            },
-          },
-        });
-        return {
-          message: 'Success',
-        };
-      } else {
-        throw new NotFoundException(
-          'Portfolio or Stock not found with provided credentials',
-        );
-      }
-    } catch (e) {
-      throw new BadRequestException(e.message);
-    }
-  }
+  //     if (portfolio && stock) {
+  //       await this.prismaService.stock.update({
+  //         where: {
+  //           stock_name: dto.stock_name,
+  //         },
+  //         data: {
+  //           portfolios: {
+  //             disconnect: { id: portfolio.id },
+  //           },
+  //         },
+  //       });
+  //       await this.prismaService.portfolio.update({
+  //         where: {
+  //           portfolio_type: dto.portfolio_type,
+  //         },
+  //         data: {
+  //           stocks: {
+  //             disconnect: { id: stock.id },
+  //           },
+  //         },
+  //       });
+  //       return {
+  //         message: 'Success',
+  //       };
+  //     } else {
+  //       throw new NotFoundException(
+  //         'Portfolio or Stock not found with provided credentials',
+  //       );
+  //     }
+  //   } catch (e) {
+  //     throw new BadRequestException(e.message);
+  //   }
+  // }
 
-  async addStockToPortfolio(dto: UpdateStockToPortfolioDto) {
-    try {
-      const portfolio = await this.prismaService.portfolio.findFirst({
-        where: { portfolio_type: dto.portfolio_type },
-      });
-      const stock = await this.prismaService.stock.findFirst({
-        where: { stock_name: dto.stock_name },
-      });
+  // async addStockToPortfolio(dto: UpdateStockToPortfolioDto) {
+  //   try {
+  //     const portfolio = await this.prismaService.portfolio.findFirst({
+  //       where: { portfolio_type: dto.portfolio_type },
+  //     });
+  //     const stock = await this.prismaService.stock.findFirst({
+  //       where: { stock_name: dto.stock_name },
+  //     });
 
-      if (portfolio && stock) {
-        await this.prismaService.stock.update({
-          where: {
-            stock_name: dto.stock_name,
-          },
-          data: {
-            portfolios: {
-              connect: { id: portfolio.id },
-            },
-          },
-        });
-        await this.prismaService.portfolio.update({
-          where: {
-            portfolio_type: dto.portfolio_type,
-          },
-          data: {
-            stocks: {
-              connect: { id: stock.id },
-            },
-          },
-        });
-        return {
-          message: 'Success',
-        };
-      } else {
-        throw new NotFoundException(
-          'Portfolio or Stock not found with provided credentials',
-        );
-      }
-    } catch (e) {
-      throw new BadRequestException(e.message);
-    }
-  }
+  //     if (portfolio && stock) {
+  //       await this.prismaService.stock.update({
+  //         where: {
+  //           stock_name: dto.stock_name,
+  //         },
+  //         data: {
+  //           portfolios: {
+  //             connect: { id: portfolio.id },
+  //           },
+  //         },
+  //       });
+  //       await this.prismaService.portfolio.update({
+  //         where: {
+  //           portfolio_type: dto.portfolio_type,
+  //         },
+  //         data: {
+  //           stocks: {
+  //             connect: { id: stock.id },
+  //           },
+  //         },
+  //       });
+  //       return {
+  //         message: 'Success',
+  //       };
+  //     } else {
+  //       throw new NotFoundException(
+  //         'Portfolio or Stock not found with provided credentials',
+  //       );
+  //     }
+  //   } catch (e) {
+  //     throw new BadRequestException(e.message);
+  //   }
+  // }
 }

@@ -28,17 +28,17 @@ export class StockController {
     return this.stockService.createStock(dto);
   }
 
-  @UseGuards(AuthGuard('jwt'))
-  @Patch('/add')
-  addStockToPortfolio(@Body() dto: UpdateStockToPortfolioDto) {
-    return this.stockService.addStockToPortfolio(dto);
-  }
+  // @UseGuards(AuthGuard('jwt'))
+  // @Patch('/add')
+  // addStockToPortfolio(@Body() dto: UpdateStockToPortfolioDto) {
+  //   return this.stockService.addStockToPortfolio(dto);
+  // }
 
-  @UseGuards(AuthGuard('jwt'))
-  @Patch('/remove')
-  removeStockFromPortfolio(@Body() dto: UpdateStockToPortfolioDto) {
-    return this.stockService.removeStockFromPortfolio(dto);
-  }
+  // @UseGuards(AuthGuard('jwt'))
+  // @Patch('/remove')
+  // removeStockFromPortfolio(@Body() dto: UpdateStockToPortfolioDto) {
+  //   return this.stockService.removeStockFromPortfolio(dto);
+  // }
 
   @UseGuards(AuthGuard('jwt'))
   @Patch(':name')

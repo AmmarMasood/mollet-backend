@@ -30,7 +30,6 @@ export class NewsController {
     return this.newsService.getMarketSentiment();
   }
 
-  @UseGuards(AuthGuard('jwt'))
   @Get('stock-info')
   getStockInformation(@Query() query: { stockName: string }) {
     return this.newsService.getStockInformation(query.stockName);

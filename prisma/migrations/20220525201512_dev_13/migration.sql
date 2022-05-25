@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "users" ALTER COLUMN "risk_score" SET DATA TYPE DOUBLE PRECISION;

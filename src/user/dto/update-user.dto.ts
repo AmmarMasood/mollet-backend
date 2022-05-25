@@ -22,7 +22,7 @@ export class UpdateUserDto {
   @IsOptional()
   invested_amount?: number;
 
-  @IsString()
+  @IsNumber()
   @IsOptional()
-  portfolio_type?: PORTFOLIO_TYPES;
+  portfolio_id?: number;
 }

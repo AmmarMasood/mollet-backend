@@ -8,5 +8,5 @@ export class CreatePortfolioDto {
 
   @IsNumber()
   @IsNotEmpty()
-  beta: number;
+  yScore: number;
 }

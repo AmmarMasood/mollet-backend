@@ -2,21 +2,19 @@
   status: 200,
   statusText: 'OK',
   headers: {
-    date: 'Wed, 25 May 2022 14:53:14 GMT',
-    'content-type': 'text/html; charset=UTF-8',
-    'transfer-encoding': 'chunked',
+    server: 'nginx/1.20.2',
+    date: 'Wed, 25 May 2022 21:47:37 GMT',
+    'content-type': 'text/html; charset=utf-8',
+    'content-length': '80176',
     connection: 'close',
-    'x-developer': 'Enjoy webdev? We like you, reach out at topcoder(at)compunode.com',
-    'x-backend': 'nk6',
-    vary: 'Accept-Encoding, x-ua-device',
-    'x-g': 'grace(update)',
-    'cf-cache-status': 'DYNAMIC',
-    'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
-    'report-to': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=P%2B0pVUEQQH7LuPBE%2B7jS4te2d0wdT3z%2BDCsx%2BiuU9LphUxUlmCcSBbM98xMNgjDoVNl6GbxUi0EzYyTIYp%2BIur6ZH4LIKurtfrAnzshn8oBQZbkWUMAXcqJhxi5IqcG1twEzTA%3D%3D"}],"group":"cf-nel","max_age":604800}',
-    nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}',
-    server: 'cloudflare',
-    'cf-ray': '710f197529540c69-AMS',
-    'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400'
+    'x-frame-options': 'SAMEORIGIN, SAMEORIGIN',
+    'strict-transport-security': 'max-age=15552000; includeSubDomains, max-age=63072000',
+    'content-security-policy': "object-src 'self'; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' https://www.capitalstake.com https://www.google-analytics.com; frame-ancestors 'self';",
+    'cache-control': 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0',
+    'x-content-type-options': 'nosniff',
+    'x-xss-protection': '1; mode=block',
+    'referrer-policy': 'same-origin',
+    'x-dis-request-id': '8e9ca81f9108fc412de3d6e7124f30e0'
   },
   config: {
     transitional: {
@@ -38,7 +36,7 @@
       'User-Agent': 'axios/0.26.0'
     },
     method: 'get',
-    url: 'https://www.brecorder.com/pakistan/business-economy',
+    url: 'https://dps.psx.com.pk/',
     data: undefined
   },
   request: <ref *1> ClientRequest {
@@ -81,7 +79,7 @@
       _controlReleased: true,
       secureConnecting: false,
       _SNICallback: null,
-      servername: 'www.brecorder.com',
+      servername: 'dps.psx.com.pk',
       alpnProtocol: false,
       authorized: true,
       authorizationError: null,
@@ -91,7 +89,7 @@
       connecting: false,
       _hadError: false,
       _parent: null,
-      _host: 'www.brecorder.com',
+      _host: 'dps.psx.com.pk',
       _readableState: [ReadableState],
       _maxListeners: undefined,
       _writableState: [WritableState],
@@ -109,7 +107,7 @@
       [Symbol(res)]: [TLSWrap],
       [Symbol(verified)]: true,
       [Symbol(pendingSession)]: null,
-      [Symbol(async_id_symbol)]: 10267,
+      [Symbol(async_id_symbol)]: 8540,
       [Symbol(kHandle)]: [TLSWrap],
       [Symbol(kSetNoDelay)]: false,
       [Symbol(lastWriteQueueSize)]: 0,
@@ -123,10 +121,10 @@
       [Symbol(connect-options)]: [Object],
       [Symbol(RequestTimeout)]: undefined
     },
-    _header: 'GET /pakistan/business-economy HTTP/1.1\r\n' +
+    _header: 'GET / HTTP/1.1\r\n' +
       'Accept: application/json, text/plain, */*\r\n' +
       'User-Agent: axios/0.26.0\r\n' +
-      'Host: www.brecorder.com\r\n' +
+      'Host: dps.psx.com.pk\r\n' +
       'Connection: close\r\n' +
       '\r\n',
     _keepAliveTimeout: 0,
@@ -156,7 +154,7 @@
     method: 'GET',
     maxHeaderSize: undefined,
     insecureHTTPParser: undefined,
-    path: '/pakistan/business-economy',
+    path: '/',
     _ended: true,
     res: IncomingMessage {
       _readableState: [ReadableState],
@@ -180,7 +178,7 @@
       _consuming: true,
       _dumped: false,
       req: [Circular *1],
-      responseUrl: 'https://www.brecorder.com/pakistan/business-economy',
+      responseUrl: 'https://dps.psx.com.pk/',
       redirects: [],
       [Symbol(kCapture)]: false,
       [Symbol(kHeaders)]: [Object],
@@ -195,7 +193,7 @@
     parser: null,
     maxHeadersCount: null,
     reusedSocket: false,
-    host: 'www.brecorder.com',
+    host: 'dps.psx.com.pk',
     protocol: 'https:',
     _redirectable: Writable {
       _writableState: [WritableState],
@@ -211,7 +209,7 @@
       _requestBodyBuffers: [],
       _onNativeResponse: [Function (anonymous)],
       _currentRequest: [Circular *1],
-      _currentUrl: 'https://www.brecorder.com/pakistan/business-economy',
+      _currentUrl: 'https://dps.psx.com.pk/',
       [Symbol(kCapture)]: false
     },
     [Symbol(kCapture)]: false,
@@ -223,181 +221,5 @@
       host: [Array]
     }
   },
-  data: '<!DOCTYPE html>\n' +
-    '<html lang="en">\n' +
-    '<head>\n' +
-    '  \n' +
-    '    <!-- meta -->\n' +
-    '    <meta charset="utf-8">\n' +
-    '    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">\n' +
-    '    <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <![endif]-->\n' +
-    '    <title>Business &amp; Economy - Pakistan - Business Recorder</title> \n' +
-    "     <meta name='subject' content='Business News, Analysis, Breaking &amp; National Pakistan Coverage' /> \n" +
-    "     <meta name='description' content='Latest News on Business, Finance and Markets from Pakistan' /> \n" +
-    "     <meta property='fb:app_id' content='1618273905063851' />  \n" +
-    "     <meta property='og:locale' content='en_US' /> \n" +
-    "     <link rel='canonical' href='https://www.brecorder.com/' /> \n" +
-    "     <link rel='alternate' type='application/rss+xml' title='Business Recorder' href='https://www.brecorder.com/feeds/pakistan/business-economy' />   \n" +
-    "     <link rel='self' href='https://www.brecorder.com/pakistan/business-economy'>\n" +
-    "     <link rel='first' href='https://www.brecorder.com/pakistan/business-economy/1'>\n" +
-    "     <link rel='last' href='https://www.brecorder.com/pakistan/business-economy/169'>\n" +
-    "     <link rel='next' href='https://www.brecorder.com/pakistan/business-economy/2'>\n" +
-    '     \n' +
-    "     <link rel='index' href='https://www.brecorder.com/pakistan' />\n" +
-    "     <meta property='og:image' content='http://www.brecorder.com/_img/social-default.jpg' />\n" +
-    "     <meta name='twitter:image' content='http://www.brecorder.com/_img/social-default.jpg' />\n" +
-    '     <script type="application/ld+json">\n' +
-    '         {"@context":"http:\\/\\/schema.org","@type":"organization","logo":"https:\\/\\/www.brecorder.com\\/_img\\/logo.png","name":"Brecorder","url":"https:\\/\\/www.brecorder.com","sameAs":["","","",""],"potentialAction":{"@type":"SearchAction","target":"https:\\/\\/www.brecorder.com\\/search?cx=6edf03d708607468f&ie=UTF-8&q={search_term_string}","query-input":"required name=search_term_string"}}\n' +
-    '     </script>\n' +
-    '     <script type="application/ld+json">\n' +
-    '         {"@context": "http://schema.org", "@type": "BreadcrumbList","itemListElement": [{"@type":"ListItem","position":1,"item":{"@id":"https:\\/\\/www.brecorder.com\\/pakistan","name":"Pakistan"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\\/\\/www.brecorder.com\\/pakistan\\/business-economy","name":"Business & Economy"}}]}\n' +
-    '     </script>\n' +
-    '                    \n' +
-    '    \n' +
-    "    <link rel='stylesheet'  href='https://www.brecorder.com/_css/native.20211021112409.css' media='all'>\n" +
-    "    <link rel='stylesheet'  href='https://www.brecorder.com/_css/newskit.20220517130307.css' media='all'>\n" +
-    "    <link rel='stylesheet'  href='https://www.brecorder.com/_css/slideshow.20211021112409.css' media='all'>\n" +
-    "    <link rel='stylesheet'  href='https://www.brecorder.com/_css/shame.20220514145308.css' media='all'>\n" +
-    "    <link rel='stylesheet'  href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;display=swap' media='all'>\n" +
-    "    <script  src='https://code.jquery.com/jquery-3.2.1.min.js' defer='true'></script>\n" +
-    "    <script  src='https://www.brecorder.com/_js/all.20220422133649.js' defer='true'></script>\n" +
-    "    <script  src='https://www.brecorder.com/_js/admin.20220422133649.js' defer='true'></script>\n" +
-    "    <link rel='preload' as='style' href='https://www.brecorder.com/_css/native.20211021112409.css'>\n" +
-    "    <link rel='preload' as='style' href='https://www.brecorder.com/_css/newskit.20220517130307.css'>\n" +
-    "    <link rel='preload' as='style' href='https://www.brecorder.com/_css/slideshow.20211021112409.css'>\n" +
-    "    <link rel='preload' as='style' href='https://www.brecorder.com/_css/shame.20220514145308.css'>\n" +
-    "    <link rel='preload' as='font' href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap'>\n" +
-    "    <link rel='preload' as='script' href='https://code.jquery.com/jquery-3.2.1.min.js'>\n" +
-    "    <link rel='preload' as='script' href='https://www.brecorder.com/_js/all.20220422133649.js'>\n" +
-    "    <link rel='preload' as='script' href='https://www.brecorder.com/_js/admin.20220422133649.js'>\n" +
-    "    <link rel='dns-prefetch  preconnect' href='i.brecorder.com'>\n" +
-    "    <link rel='dns-prefetch  preconnect' href='fonts.googleapis.com'>\n" +
-    "    <link rel='dns-prefetch  preconnect' href='code.jquery.com'>\n" +
-    '      \n' +
-    '    \n' +
-    '<!-- - - - - - - adsense:header start - - - - - - -->\n' +
-    '<script async="async" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>\n' +
-    "<script type='text/javascript'>\n" +
-    'var googletag = googletag || {};\n' +
-    'googletag.cmd = googletag.cmd || [];\n' +
-    '\n' +
-    'googleAdsSlots = [];\n' +
-    'googletag.cmd.push(function() {\n' +
-    '      \n' +
-    "    googleAdsSlots.push(googletag.defineSlot('/1055356/BR-Wordpress-Home', [728,90], 'div-gpt-ad-1591001802023-0').addService(googletag.pubads()));\n" +
-    "    googleAdsSlots.push(googletag.defineSlot('/1055356/BRHomePage', [728,90], 'div-gpt-ad-1591001862461-0').addService(googletag.pubads()));\n" +
-    "    googleAdsSlots.push(googletag.defineSlot('/1055356/BR-Wordpress-Home-Mrec', [300,250], 'div-gpt-ad-1591001958264-0').addService(googletag.pubads()));\n" +
-    "    googleAdsSlots.push(googletag.defineSlot('/1055356/BRNewMobileMREC', [300,250], 'div-gpt-ad-1591002018714-0').addService(googletag.pubads()));\n" +
-    "    googleAdsSlots.push(googletag.defineSlot('/1055356/BRNewMobileMREC', [300,250], 'div-gpt-ad-1619428099596-0').addService(googletag.pubads()));\n" +
-    "    googleAdsSlots.push(googletag.defineSlot('/1055356/brmarketing', [300,250], 'div-gpt-ad-1619427979289-0').addService(googletag.pubads()));\n" +
-    "    googleAdsSlots.push(googletag.defineSlot('/1055356/BRBillboard', [970,250], 'div-gpt-ad-1591001610605-0').addService(googletag.pubads()));\n" +
-    '\n' +
-    '  googletag.pubads().set("document_language", "en");\n' +
-    '  \n' +
-    '  googletag.pubads().collapseEmptyDivs();\n' +
-    "  googletag.pubads().setTargeting('site', 'www.brecorder.com');\n" +
-    `  googletag.pubads().setTargeting('category', ["Business Economy","Pakistan"]);\n` +
-    '  \n' +
-    '  googletag.pubads().disableInitialLoad();\n' +
-    '  googletag.pubads().enableLazyLoad({\n' +
-    '                fetchMarginPercent: 300,\n' +
-    '                renderMarginPercent: 300,\n' +
-    '                mobileScaling: 2.0\n' +
-    '            })\n' +
-    '  googletag.enableServices();\n' +
-    '});\n' +
-    'function render(divId) {\n' +
-    '    if (!divId) {\n' +
-    "        console.log('Error: Ad not found divid: ' + divId);\n" +
-    '        return;\n' +
-    '    }\n' +
-    '    \n' +
-    '    var cookieValue = "; " + document.cookie;\n' +
-    '    var cookieParts = cookieValue.split("; " + divId + "=");\n' +
-    "    if (cookieParts.pop().split(';').shift() != divId) {\n" +
-    '        googletag.cmd.push(function() {googletag.display(divId)});\n' +
-    '    } else {\n' +
-    "        var adContainer = document.getElementById(divId).closest('.ad');\n" +
-    "        adContainer.classList.remove('block', 'sm:block');\n" +
-    "        adContainer.classList.add('hidden');\n" +
-    '    }\n' +
-    '}\n' +
-    '</script>\n' +
-    '<!-- - - - - - - adsense:header end - - - - - - -->\n' +
-    '\n' +
-    '<!-- - - - - start:refresh slots - - - - -->\n' +
-    '<script type="text/javascript">\n' +
-    'var setupGoogleAdsInterval = setInterval(function() {\n' +
-    "    if (typeof googletag != 'undefined' && typeof jQuery != 'undefined') {\n" +
-    '        clearInterval(setupGoogleAdsInterval);\n' +
-    '        setupGoogleAds();\n' +
-    '    }\n' +
-    '}, 100);\n' +
-    'function setupGoogleAds() {\n' +
-    '  googletag.cmd.push(function() {\n' +
-    '\n' +
-    '    for (i = 0; i < googleAdsSlots.length; i++) {\n' +
-    '      var slot = googleAdsSlots[i];\n' +
-    '      var id = slot.getSlotElementId();\n' +
-    '      var div = document.getElementById(id);\n' +
-    '\n' +
-    '      // https://stackoverflow.com/a/33456469  \n' +
-    '      if (div && (!!(div.offsetWidth || div.offsetHeight || div.getClientRects().length))) {\n' +
-    '        googletag.pubads().refresh([slot], {changeCorrelator: false});\n' +
-    '      }\n' +
-    '    }\n' +
-    '    \n' +
-    '    // Refresh slots without page reload\n' +
-    "    googletag.pubads().addEventListener('impressionViewable', function(event) {\n" +
-    '      var slot = event.slot;\n' +
-    '      var id = slot.getSlotElementId();\n' +
-    '      var div = document.getElementById(id);\n' +
-    "      var refreshTime = parseInt(div.getAttribute('data-ad-refresh'));\n" +
-    '      // 30 is minimum time\n' +
-    '      if (refreshTime >= 30) {\n' +
-    '        setTimeout(function() {\n' +
-    '          googletag.pubads().refresh([slot]);\n' +
-    '        }, refreshTime * 1000);\n' +
-    '      }\n' +
-    '    });\n' +
-    '\n' +
-    '    // http://stackoverflow.com/a/30935893\n' +
-    '    // https://developers.google.com/doubleclick-gpt/reference#googletag.events.SlotRenderEndedEvent\n' +
-    '    // it is required as sometimes rendered ad is empty but rad adds width and height on the div\n' +
-    "    // which doesn't allow the ad to collapse in this case\n" +
-    "    googletag.pubads().addEventListener('slotRenderEnded', function(e) {\n" +
-    "      var $renderedSlot = $('#' + e.slot.getSlotElementId());\n" +
-    '      if(e.isEmpty) {\n' +
-    `        $renderedSlot.parents('.ad').attr("style", "display: none !important");\n` +
-    '      } else {\n' +
-    '        // see issues #/836\n' +
-    "        // multi dimension ads rad init, as we don't know which ad is rendered so\n" +
-    '        // we get the dimensions of rendered ad and then configure it with rad\n' +
-    '        var width = 0;\n' +
-    '        var height = 0;\n' +
-    "        var isMultidimensionalAd = $renderedSlot.parents('.ad').find('.rad--multi').length > 0;\n" +
-    "        var isPriorityAd = $renderedSlot.parents('.ad').hasClass('ad--priority');\n" +
-    '        if(e.size.length) {\n' +
-    '          width = e.size[0];\n' +
-    '          height = e.size[1];\n' +
-    '        }\n' +
-    '        \n' +
-    '        if (isMultidimensionalAd) {\n' +
-    '            if (width && height) {\n' +
-    "              $renderedSlot.css({width: width+'px', height: height+'px'});\n" +
-    "              $renderedSlot.closest('.js-ad').css({maxWidth: width+'px', maxHeight: height+'px', paddingBottom: 0});\n" +
-    "              $renderedSlot.rad({allowBiggerSizing:'true'});\n" +
-    '            }\n' +
-    '        }\n' +
-    '        if (isPriorityAd) {\n' +
-    '          if (width && height) {\n' +
-    `            var onMouseOut  =  "javascript:this.style.overflow='hidden';"\n` +
-    `                   +"__adi=$(this).find('iframe').eq(0);"\n` +
-    '                   +"__adi.height(height);";\n' +
-    `            var onMouseOver =  "javascript:this.style.overflow='visible';"\n` +
-    `                   +"__adi=$(this).find('iframe').eq(0);"\n` +
-    '                   +"__adi.contents().height();" // weird, adding this fixes Firefox expanding issue\n' +
-    '                   +"setTimeout(function(){__adi.height(__adi.contents().height() || height);}, 10);";\n' +
-    "            $renderedSlot.parents('.js-ad').attr('onMouseOver', onMouseOver);\n" +
-    '            $rend'... 217232 more characters
+  data: `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="google-site-verification" content="ucGuScv6fdM8uhZru-aeXK4qsaPfO3HiuZFKB90UpPU"><meta name="description" content="PSX (Pakistan Stock Exchange Limited) - Stock/share market updates from Pakistan’s premier stock exchange. Get all the current stock/share market data; information to investors on KSE 100, stock quotes, indices and corporate announcements."><meta name="keywords" content="Pakistan Stock Exchange, Stock Exchange in Pakistan, PSX, PSX Pakistan, dps, data portal, KSE, KSE100, KSE announcement, PSX announcement, Lahore Stock Exchange, Karachi Stock Exchange, stock exchange, share markets, stock markets, live stock market, share market in Pakistan"><link rel="icon" type="image/png" href="https://dps.psx.com.pk/static/images/favicon.png"><!-- Apple specific--><link rel="apple-touch-icon" href="https://dps.psx.com.pk/static/images/logo-200.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta property="og:url" content="https://dps.psx.com.pk/"><meta property="og:type" content="website"><meta property="og:title" content="Data Portal - Pakistan Stock Exchange (PSX)"><meta property="og:description" content="PSX (Pakistan Stock Exchange Limited) - Stock/share market updates from Pakistan’s premier stock exchange. Get all the current stock/share market data; information to investors on KSE 100, stock quotes, indices and corporate announcements."><meta property="og:image" content="https://dps.psx.com.pk/static/images/logo-200.png"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@pakstockexgltd"><meta name="twitter:title" content="Data Portal - Pakistan Stock Exchange (PSX)"><meta name="twitter:description" content="PSX (Pakistan Stock Exchange Limited) - Stock/share market updates from Pakistan’s premier stock exchange. Get all the current stock/share market data; information to investors on KSE 100, stock quotes, indices and corporate announcements."><meta name="twitter:image" content="https://dps.psx.com.pk/static/images/logo-200.png"><title>Data Portal - Pakistan Stock Exchange (PSX)</title><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700"><link rel="stylesheet" href="/static/styles.css?v=1.07"><script src="/static/script.js?v=1.07"></script></head><body><div class="header"><div class="topbar"><div class="topbar__container"><div class="header__logo"><img src="/static/images/logo-white-bg.png"></div><div class="topbar__menus"><div class="topbar__menu"><div><div class="topbar__status" style="border:none;"><div class="topbar__status__label">May 26, 2022 2:47 AM</div></div></div><div><a class="topbar__status" href="https://www.psx.com.pk/" target="_blank" onclick="tobl('https://www.psx.com.pk')"><div class="topbar__status__date"><i class="icon-briefcase"></i></div><div class="topbar__status__label">PSX CORPORATE WEBSITE</div></a></div><div class="searchbar"><div class="searchbar__container autocomplete"><div class="dropdown"><select class="dropdown__select" name="sector"><option value="symbols">Symbols</option><option value="website">Website</option></select></div><input class="searchbar__input" id="mainSearchbar" type="text" placeholder="Search..."><div class="searchbar__icon"><i class="icon-search"></i></div></div></div></div></div></div></div><div class="top__nav"><div class="top__nav__container"><div class="top__nav__title"><a href="/"><img src="/static/images/data-portal-text.png"></a></div><div class="top__nav__menu"><a class="top__nav__menuItem top__nav__menuItem--link" href="/portfolio"> <span class="item__name">My Portfolio</span></a><div class="top__nav__menuItem"> <span class="item__name">Market<i class="icon-down-dir"></i></span><div class="top__nav__subMenu"><div class="top__nav__subMenuList"><a class="top__nav__subMenuItem" href="/">Today's Summary</a><a class="top__nav__subMenuItem" href="/trading-panel" target="_blank">Trading Panel</a><a class="top__nav__subMenuItem" href="/indices">Market Indices</a><a class="top__nav__subMenuItem" href="/sector-summary">Sector Summary</a><a class="top__nav__subMenuItem" href="/screener">Stock Screener</a><a class="top__nav__subMenuItem" href="/historical">Historical Data</a><a class="top__nav__subMenuItem" href="/eligible-scrips">Eligible Scrips</a><a class="top__nav__subMenuItem" href="/graphical-view">Graphical View</a><a class="top__nav__subMenuItem" href="/daily-report">Daily Report</a></div></div></div><div class="top__nav__menuItem"> <span class="item__name">Announcements<i class="icon-down-dir"></i></span><div class="top__nav__subMenu"><div class="top__nav__subMenuList"><a class="top__nav__subMenuItem" href="/announcements/psx">PSX Notices</a><a class="top__nav__subMenuItem" href="/announcements/companies">Company Announcements</a><a class="top__nav__subMenuItem" href="/announcements/cdc">CDC Notices</a><a class="top__nav__subMenuItem" href="/announcements/secp">SECP Notices</a><a class="top__nav__subMenuItem" href="/announcements/nccpl">NCCPL Notices</a><a class="top__nav__subMenuItem" href="/calendar">AGM/EOGM Calendar</a></div></div></div><div class="top__nav__menuItem"><span class="item__name">Companies<i class="icon-down-dir"></i></span><div class="top__nav__subMenu"><div class="top__nav__subMenuList"><a class="top__nav__subMenuItem" href="/listings">Listing Status</a><a class="top__nav__subMenuItem" href="/circuit-breakers">Circuit Breakers</a><a class="top__nav__subMenuItem" href="/margin-eligible-securities">Margin Eligible Securities</a><a class="top__nav__subMenuItem" href="/aquisition-loss-shares">Aquisition/Loss of Shares</a></div></div></div><div class="top__nav__menuItem"><span class="item__name">Reports<i class="icon-down-dir"></i></span><div class="top__nav__subMenu top__nav__subMenu--right"><div class="top__nav__subMenuList"><a class="top__nav__subMenuItem" href="/downloads">Downloads</a><a class="top__nav__subMenuItem" href="https://financials.psx.com.pk/" target="_blank">Financial Reports </a><a class="top__nav__subMenuItem" href="/analysis-reports">Analysis Reports </a><a class="top__nav__subMenuItem" href="/nd-verification">ND Verification</a><a class="top__nav__subMenuItem" href="/debt-market">Debt Market</a><a class="top__nav__subMenuItem" href="/indices-div-discount">PSX Indices Div. Discount</a><a class="top__nav__subMenuItem" href="/unlisted-tfcs">Unlisted TFCs Trading Rep.</a><a class="top__nav__subMenuItem" href="/monthly-reports">Monthly Reports</a><a class="top__nav__subMenuItem" href="/progress-report">5 Years Progress Report</a></div></div></div></div></div></div></div><div class="header__mobile"><div class="header__mobile__nav"><div class="header__mobile__navbar"><div class="header__mobile__logo"><a href="/"><img src="/static/images/logo.png"></a></div><div class="header__mobile__rightMenu"><div><a class="topbar__status" href="https://www.psx.com.pk/" target="_blank" onclick="tobl('https://www.psx.com.pk')"><div class="topbar__status__date"><i class="icon-briefcase"></i></div><div class="topbar__status__label">PSX CORPORATE WEBSITE</div></a></div><div class="searchbar__icon"><i class="icon-search"></i></div><div class="header__mobile__menu__btn"><i class="icon-menu"></i></div></div></div><div class="header__mobile__menu"><a class="header__mobile__menuItem header__mobile__menuItem--link" href="/portfolio"><span class="item__name">MY PORTFOLIO</span></a><div class="header__mobile__menuItem" data-menu="#header-menu"><span class="item__name">MARKET<i class="icon-left-dir"></i></span></div><div class="header__mobile__subMenu" id="header-menu"><ul><li> <a href="/">Today’s Summary</a></li><li> <a href="/trading-panel">Trading Panel</a></li><li> <a href="/indices">Market Indices</a></li><li> <a href="/sector-summary">Sector Summary</a></li><li> <a href="/screener">Stock Screener</a></li><li> <a href="/historical">Historical Data</a></li><li> <a href="/eligible-scrips">Eligible Scrips</a></li><li> <a href="/graphical-view">Graphical View</a></li><li> <a href="/daily-report">Daily Report</a></li></ul></div><div class="header__mobile__menuItem" data-menu="#header-announce"><span class="item__name">Announcements<i class="icon-left-dir"></i></span></div><div class="header__mobile__subMenu" id="header-announce"><ul class="dropdown-menu"><li> <a href="/announcements/psx">PSX Notices</a></li><li> <a href="/announcements/companies">Company Announcements</a></li><li> <a href="/announcements/cdc">CDC Notices</a></li><li> <a href="/announcements/secp">SECP Notices</a></li><li> <a href="/announcements/nccpl">NCCPL Notices</a></li><li> <a href="/calendar">AGM/EOGM Calendar</a></li></ul></div><div class="header__mobile__menuItem" data-menu="#header-companies"><span class="item__name">Companies<i class="icon-left-dir"></i></span></div><div class="header__mobile__subMenu" id="header-companies"><ul><li><a href="/listings">Listing Status</a></li><li><a href="/circuit-breakers">Circuit Breakers</a></li><li><a href="/margin-eligible-securities">Margin Eligible Securities</a></li><li><a href="/aquisition-loss-shares">Aquisition/Loss of Shares</a></li></ul></div><div class="header__mobile__menuItem" data-menu="#header-reports"><span class="item__name">Reports<i class="icon-left-dir"></i></span></div><div class="header__mobile__subMenu" id="header-reports"><ul><li><a href="/downloads">Downloads</a></li><li> <a href="https://financials.psx.com.pk/" target="_blank">Financial Reports</a></li><li> <a href="/analysis-reports">Analysis Reports</a></li><li><a href="/nd-verification">ND Verification</a></li><li><a href="/debt-market">Debt Market</a></li><li><a href="/indices-div-discount">PSX Indices Div. Discount</a></li><li><a href="/unlisted-tfcs">Unlisted TFCs Trading Rep.</a></li><li> <a href="/monthly-reports">Monthly Reports</a></li><li> <a href="/progre`... 70072 more characters
 }
